@@ -3,3 +3,5 @@
 export(getclass)
 export(getcodesNOURISHbase)
 export(getpath)
+export(setsumm)
+export(summ)

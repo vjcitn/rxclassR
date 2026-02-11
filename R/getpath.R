@@ -5,7 +5,6 @@
 #' getpath()
 #' @export
 getpath = function(classid="B01AF") {
-  print(classid)
  stopifnot(length(classid)==1)
  stopifnot(is.atomic(classid))
  url = sprintf("https://rxnav.nlm.nih.gov/REST/rxclass/classContext.json?classId=%s", classid)
