@@ -5,13 +5,17 @@
 #' getpath()
 #' @export
 getpath = function(classid="B01AF") {
+  print(classid)
  stopifnot(length(classid)==1)
  stopifnot(is.atomic(classid))
  url = sprintf("https://rxnav.nlm.nih.gov/REST/rxclass/classContext.json?classId=%s", classid)
  ans = GET(url)
  cans = content(ans)
  stopifnot(names(cans)=="classPathList")
- ans = cans[[1]][[1]][[1]] |> sapply(unlist, recursive=FALSE) |> matrix(nrow=3)
- rownames(ans) = c("code", "label", "base")
- ans
+# ans = cans[[1]][[1]][[1]] |> sapply(unlist, recursive=FALSE) |> matrix(nrow=3)
+# rownames(ans) = c("code", "label", "base")
+ cid = jsonlite::fromJSON(rjsoncons::jsonpath(cans,"$..classId"))
+ cna = jsonlite::fromJSON(rjsoncons::jsonpath(cans,"$..className"))
+ cty = jsonlite::fromJSON(rjsoncons::jsonpath(cans,"$..classType"))
+ data.frame(classId=cid, className=cna, classType=cty)
 }

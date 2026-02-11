@@ -9,6 +9,9 @@ getpath(classid = "B01AF")
 \arguments{
 \item{classid}{character(1) defaults to an ATC1-4 code B01AF}
 }
+\value{
+a matrix with three rows
+}
 \description{
 decode a classid and provide information on the hierarchy in which it is included
 }
