@@ -1,0 +1,46 @@
+---
+title: "rxclassR: use the NIH rxclass API for drug classification"
+author: "Vincent J. Carey, stvjc at channing.harvard.edu"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{rxclassR: use the NIH rxclass API for drug classification}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    highlight: pygments
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+# Introduction
+
+We will use the API at `https://rxnav.nlm.nih.gov/REST/rxclass` as
+defined in early 2026 to simplify classification of drugs.
+
+We will assume that an `rxcui` identifier is available for any drug of interest.
+
+This package is not designed to do large scale interrogation of the API,
+which might lead to banning the host IP address for overuse.  Any loops
+should include sleep directives.
+
+# Obtaining classification codes
+
+The endpoint `rxclass/class/byRxcui` is very inclusive and will
+return information on multiple related compounds.  The `filter`
+argument forces focus on the compound rxcui supplied.
+
+```{r do1, message=FALSE}
+library(rxclassR)
+getclass(1364447, filter=TRUE)
+```
+
+# Learning about the hierarchy of a given class
+
+Here we assume the argument is a potential class code known
+to the rxclass API.
+
+```{r do2}
+getpath("B01AF")
+```

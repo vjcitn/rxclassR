@@ -1,0 +1,16 @@
+Package: rxclassR
+Title: use NIH drug classification API
+Description: use NIH drug classification API
+Version: 0.0.0
+Author: Vince Carey
+Suggests: knitr
+Depends: R (>= 4.1.0), httr, listviewer, jsonlite, haven
+Maintainer: VJ Carey <stvjc@channing.harvard.edu>
+License: Artistic-2.0
+LazyLoad: yes
+LazyData: yes
+VignetteBuilder: knitr
+RoxygenNote: 7.3.3
+Encoding: UTF-8
+URL: https://github.com/vjcitn/rxclassR
+BugReports: https://github.com/vjcitn/rxclassR/issues

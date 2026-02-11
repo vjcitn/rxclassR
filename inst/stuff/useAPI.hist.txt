@@ -1,0 +1,32 @@
+source("getcodes.R", echo=TRUE)
+cc = getcodes()
+dim(cc)
+cc[1,]
+cc[1,] |> as.data.frame()
+library(httr)
+g1 = GET("https://rxnav.nlm.nih.gov/REST/rxcui/1364447.json")
+content(g1)
+getclass = function(num) {
+ GET(sprintf("https://rxnav.nlm.nih.gov/REST/rxclass/class/byRxcui.json?rxcui=%s", num))
+}
+ getclass(1364447)
+chk = .Last.value
+content(chk)
+content(chk) -> apix
+library(listviewer)
+BiocManager::install("listviewer")
+library(listviewer)
+jsonedit(apix)
+save(apix, file="apix.rda")
+getwd()
+setwd("..")
+fg)
+dim(cc)
+cc[1:4,]
+colnames(cc)
+length(unique(cc$pres_cmed1_b))
+length(unique(cc$pres_cmed2_b))
+length(unique(c(cc$pres_cmed2_b, cc$pres_cmed1_b)))
+length(unique(c(cc$pres_cmed2_b, cc$pres_cmed1_b, cc$pres_cmed3_b)))
+getwd()
+savehistory(file="useAPI.hist.txt")
