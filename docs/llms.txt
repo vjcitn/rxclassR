@@ -1,0 +1,51 @@
+<div id="main" class="col-md-9" role="main">
+
+# rxclassR
+
+<div class="section level1">
+
+define client functions for NIH rxclass API
+
+</div>
+
+</div>
+
+<div id="main" class="col-md-9" role="main">
+
+# Package index
+
+<div class="section level2">
+
+## All functions
+
+</div>
+
+<div class="section level2">
+
+-   `getclass()` : given rxcui, produce a list from rxclass 'byRxcui'
+-   `getcodesNOURISHbase()` : helper in channing system
+-   `getpath()` : decode a classid and provide information on the
+    hierarchy in which it is included
+
+</div>
+
+</div>
+
+<div id="main" class="col-md-9" role="main">
+
+# Articles
+
+<div class="section">
+
+### All vignettes
+
+<div class="section-desc">
+
+</div>
+
+-   [rxclassR: use the NIH rxclass API for drug
+    classification](https://github.com/vjcitn/rxclassR/articles/rxclassR.md):
+
+</div>
+
+</div>
