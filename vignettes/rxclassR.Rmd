@@ -7,7 +7,7 @@ vignette: >
   %\VignetteIndexEntry{rxclassR: use the NIH rxclass API for drug classification}
   %\VignetteEncoding{UTF-8}
 output:
-  BiocStyle::html_document:
+  html_document:
     highlight: pygments
     number_sections: yes
     theme: united
@@ -44,3 +44,24 @@ to the rxclass API.
 ```{r do2}
 getpath("B01AF")
 ```
+
+# Configurations of treatments
+
+The `make_upset` function shows the most common
+classes and combinations seen in the cohort.
+
+```{r cont}
+suppressWarnings(example(make_upset, ask=FALSE))
+```
+
+Note that the diagram depends on the selection of
+the 'depth' in the summ function.
+
+```{r dode}
+ thes = lapply(allcls, summ, 2)
+ for (i in seq_len(length(allcls))) thes[[i]]$id = i
+ ddf = do.call(rbind, thes)
+ suppressWarnings(make_upset(ddf))
+```
+
+
