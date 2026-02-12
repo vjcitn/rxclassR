@@ -3,7 +3,7 @@
 #' @param level depth in hierarchy of rxClass path
 #' @examples
 #' data(allcls)
-#' summ(allcls)
+#' summ(allcls[[1]])
 #' @export
 summ = function(cl, level=4) {
   haserr = which(sapply(cl, function(x) inherits(x, "try-error")))

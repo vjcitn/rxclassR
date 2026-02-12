@@ -38,26 +38,25 @@ getclass(1364447, filter=TRUE)
     ## $input
     ## [1] 1364447
     ## 
-    ## $items
-    ##           [,1]                         
-    ## classId   "B01AF"                      
-    ## className "Direct factor Xa inhibitors"
-    ## classType "ATC1-4"                     
+    ## $name
+    ## [1] "apixaban 5 MG Oral Tablet [Eliquis]"
+    ## 
+    ## $classinfo
+    ##      rxcui classtype                   classname classid
+    ## 3  1364430    ATC1-4 Direct factor Xa inhibitors   B01AF
+    ## 20 1364445    ATC1-4 Direct factor Xa inhibitors   B01AF
+    ## 22 1364447    ATC1-4 Direct factor Xa inhibitors   B01AF
+    ## 24 1992427    ATC1-4 Direct factor Xa inhibitors   B01AF
+    ## 26 1992428    ATC1-4 Direct factor Xa inhibitors   B01AF
     ## 
     ## $paths
-    ## $paths$classId
-    ##       [,1]                          [,2]                   
-    ## code  "B01AF"                       "B01A"                 
-    ## label "Direct factor Xa inhibitors" "ANTITHROMBOTIC AGENTS"
-    ## base  "ATC1-4"                      "ATC1-4"               
-    ##       [,3]                    [,4]                            
-    ## code  "B01"                   "B"                             
-    ## label "ANTITHROMBOTIC AGENTS" "BLOOD AND BLOOD FORMING ORGANS"
-    ## base  "ATC1-4"                "ATC1-4"                        
-    ##       [,5]                             
-    ## code  "0"                              
-    ## label "Anatomical Therapeutic Chemical"
-    ## base  "ATC1-4"
+    ## $paths[[1]]
+    ##   classId                       className classType
+    ## 1   B01AF     Direct factor Xa inhibitors    ATC1-4
+    ## 2    B01A           ANTITHROMBOTIC AGENTS    ATC1-4
+    ## 3     B01           ANTITHROMBOTIC AGENTS    ATC1-4
+    ## 4       B  BLOOD AND BLOOD FORMING ORGANS    ATC1-4
+    ## 5       0 Anatomical Therapeutic Chemical    ATC1-4
 
 </div>
 
@@ -76,18 +75,12 @@ getpath("B01AF")
 
 </div>
 
-    ##       [,1]                          [,2]                   
-    ## code  "B01AF"                       "B01A"                 
-    ## label "Direct factor Xa inhibitors" "ANTITHROMBOTIC AGENTS"
-    ## base  "ATC1-4"                      "ATC1-4"               
-    ##       [,3]                    [,4]                            
-    ## code  "B01"                   "B"                             
-    ## label "ANTITHROMBOTIC AGENTS" "BLOOD AND BLOOD FORMING ORGANS"
-    ## base  "ATC1-4"                "ATC1-4"                        
-    ##       [,5]                             
-    ## code  "0"                              
-    ## label "Anatomical Therapeutic Chemical"
-    ## base  "ATC1-4"
+    ##   classId                       className classType
+    ## 1   B01AF     Direct factor Xa inhibitors    ATC1-4
+    ## 2    B01A           ANTITHROMBOTIC AGENTS    ATC1-4
+    ## 3     B01           ANTITHROMBOTIC AGENTS    ATC1-4
+    ## 4       B  BLOOD AND BLOOD FORMING ORGANS    ATC1-4
+    ## 5       0 Anatomical Therapeutic Chemical    ATC1-4
 
 </div>
 

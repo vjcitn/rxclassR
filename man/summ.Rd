@@ -16,5 +16,5 @@ produce a summary from a getclass collection
 }
 \examples{
 data(allcls)
-summ(allcls)
+summ(allcls[[1]])
 }
