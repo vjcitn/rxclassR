@@ -1,7 +1,7 @@
 Package: rxclassR
 Title: use NIH drug classification API
 Description: use NIH drug classification API
-Version: 0.0.3
+Version: 0.0.4
 Author: Vince Carey
 Suggests: knitr, BiocStyle
 Depends: R (>= 4.1.0), httr, listviewer, jsonlite, haven, rjsoncons
