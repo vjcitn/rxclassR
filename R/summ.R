@@ -10,5 +10,5 @@ summ = function(cl, level=4) {
   if (length(haserr)>0) cl = cl[-haserr]
   ns = sapply(cl, function(x) x$name)
   cl = sapply(cl, function(x) x$paths[[1]]$className[level])
-  data.frame(rxname=ns, class=cl)
+  data.frame(rxname=ns, rxclass=cl, level=level)
 }
