@@ -84,4 +84,50 @@ getpath("B01AF")
 
 </div>
 
+<div class="section level2">
+
+## Configurations of treatments
+
+The `make_upset` function shows the most common classes and combinations
+seen in the cohort.
+
+<div id="cb5" class="sourceCode">
+
+``` r
+suppressWarnings(example(make_upset, ask=FALSE))
+```
+
+</div>
+
+    ## 
+    ## mk_pst> data(allcls)
+    ## 
+    ## mk_pst> thes = lapply(allcls, summ, 3)
+    ## 
+    ## mk_pst> for (i in seq_len(length(allcls))) thes[[i]]$id = i
+    ## 
+    ## mk_pst> ddf = do.call(rbind, thes)
+    ## 
+    ## mk_pst> make_upset(ddf)
+
+![](rxclassR_files/figure-html/cont-1.png)
+
+Note that the diagram depends on the selection of the ‘depth’ in the
+summ function.
+
+<div id="cb7" class="sourceCode">
+
+``` r
+ thes = lapply(allcls, summ, 2)
+ for (i in seq_len(length(allcls))) thes[[i]]$id = i
+ ddf = do.call(rbind, thes)
+ suppressWarnings(make_upset(ddf))
+```
+
+</div>
+
+![](rxclassR_files/figure-html/dode-1.png)
+
+</div>
+
 </div>

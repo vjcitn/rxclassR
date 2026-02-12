@@ -18,13 +18,13 @@ Source:
 [`DESCRIPTION`](https://github.com/vjcitn/rxclassR/blob/HEAD/DESCRIPTION)
 
 Carey V (2026). *rxclassR: use NIH drug classification API*. R package
-version 0.0.2, <https://github.com/vjcitn/rxclassR>.
+version 0.0.4, <https://github.com/vjcitn/rxclassR>.
 
     @Manual{,
       title = {rxclassR: use NIH drug classification API},
       author = {Vince Carey},
       year = {2026},
-      note = {R package version 0.0.2},
+      note = {R package version 0.0.4},
       url = {https://github.com/vjcitn/rxclassR},
     }
 

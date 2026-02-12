@@ -3,7 +3,7 @@ pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   rxclassR: rxclassR.html
-last_built: 2026-02-12T03:26Z
+last_built: 2026-02-12T16:56Z
 urls:
   reference: https://github.com/vjcitn/rxclassR/reference
   article: https://github.com/vjcitn/rxclassR/articles

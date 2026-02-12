@@ -4,7 +4,20 @@
 
 <div class="section level1">
 
-define client functions for NIH rxclass API
+This package defines client functions for NIH rxclass API.
+
+The NIH RxNorm API can provide “rxcui” identifiers for drugs. Patients
+with polypharmacy can have different configurations of drug classes as
+defined by RxClass API. This package helps to produce summaries of drug
+usage in cohorts.
+
+<div class="figure">
+
+![](reference/figures/ups.png)
+
+upset diagram
+
+</div>
 
 </div>
 
@@ -26,6 +39,8 @@ define client functions for NIH rxclass API
 -   `getcodesNOURISHbase()` : helper in channing system
 -   `getpath()` : decode a classid and provide information on the
     hierarchy in which it is included
+-   `make_upset()` : produce an upset plot for drug categories based on
+    output of \`summ\` applied to multiple prescription series
 -   `setsumm()` : provide a summary for a set of Rx codes that might
     represent a patient's profile
 -   `summ()` : produce a summary from a getclass collection
