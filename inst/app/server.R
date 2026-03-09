@@ -8,6 +8,8 @@ server = function(input, output) {
    })
    output$freq = renderPrint({
     allt = do.call(rbind, lapply(allcls, function(x) summ(x, as.numeric(input$height))))
+    if (input$count_by_drug)
+      allt = allt[!duplicated(allt[, c("rxname", "rxclass")]), ]
     tab = sort(table(allt$rxclass), decreasing=TRUE)
     tab
    })

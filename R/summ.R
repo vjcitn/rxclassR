@@ -8,7 +8,9 @@
 summ = function(cl, level=4) {
   haserr = which(sapply(cl, function(x) inherits(x, "try-error")))
   if (length(haserr)>0) cl = cl[-haserr]
-  ns = sapply(cl, function(x) x$name)
-  cl = sapply(cl, function(x) x$paths[[1]]$className[level])
-  data.frame(rxname=ns, rxclass=cl, level=level)
+  rows = lapply(cl, function(x) {
+    classes = sapply(x$paths, function(p) p$className[level])
+    data.frame(rxname=x$name, rxclass=classes, level=level, stringsAsFactors=FALSE)
+  })
+  do.call(rbind, rows)
 }

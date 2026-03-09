@@ -17,6 +17,7 @@ ui = fluidPage(
     ),
     tabPanel("freq",
      helpText("categories depend on selection of 'height'"),
+     checkboxInput("count_by_drug", "Count distinct drugs per class (uncheck to count paths)", value = FALSE),
      verbatimTextOutput("freq")
     ),
     tabPanel("upset", 
