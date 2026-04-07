@@ -6,7 +6,7 @@
 on output of `summ` applied to multiple prescription
 series}
 \usage{
-make_upset(drugdf, nsets_in = 7, nintersects_in = 8, maxlablength = 22)
+make_upset(drugdf, nsets_in = 7, nintersects_in = 8, maxlablength = 32)
 }
 \arguments{
 \item{drugdf}{a data.frame as produced by `summ`}
@@ -15,7 +15,7 @@ make_upset(drugdf, nsets_in = 7, nintersects_in = 8, maxlablength = 22)
 
 \item{nintersects_in}{passed to nsets of upset()}
 
-\item{maxlablength}{numeric default to 22, class labels longer than this will be presented via substring}
+\item{maxlablength}{numeric default to 22, class labels longer than this will be presented via substr}
 }
 \description{
 produce an upset plot for drug categories based
